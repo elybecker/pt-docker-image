@@ -1,11 +1,12 @@
 # pt-docker-image
 PyTorch Docker Image
 
-Simple example of setting up a PyTorch Docker
+Simple working example of a PyTorch project with Docker
 
 ## Usage 
 
-Working with docker locally
+* Working with docker locally
+
 > make build
 
 > make up
@@ -14,7 +15,8 @@ Working with docker locally
 
 > make connect
 
-Working with docker remotely
+* Working with docker remotely
+
 > make build_r
 
 > make up_r
