@@ -1,0 +1,20 @@
+version: '2.3'
+services:
+  interactive:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - USER_ID=${USER_ID}
+        - USER_NAME=${USER_NAME}
+    ports:
+      - ${TENSORBOARD_PORT}:6006
+    container_name: ${USER_NAME}s-container
+    image: ${PROJ_NAME}-${USER_NAME}
+    user: ${USER_ID}:${USER_ID}
+    stdin_open: true
+    tty: true
+    command: bash
+    runtime: nvidia
+    volumes:
+        - ..:/workspace
