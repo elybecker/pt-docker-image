@@ -17,4 +17,4 @@ services:
     command: bash
     runtime: nvidia
     volumes:
-        - ..:/workspace
+        - ../workspace:/workspace
